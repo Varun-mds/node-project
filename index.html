@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/jquery-form-validator/form-validator/jquery.form-validator.min.js">
+    </script>
+    
+    </head>
+
+<body>
+    <h1> Registration Form</h1>
+    
+   <form action="" method="POST">
+  <p>
+    Name:
+    <input name="user"  data-validation="length" data-validation-length="min" data-validation="length" >
+  </p>
+  <p>
+    Age :
+   <input type="text" data-validation="number" data-validation-allowing="range[1;100]">
+  </p>
+  <p>
+    Email :
+   <input type="text" data-validation="email">
+  </p>
+       <p>
+    10th :
+   <input type="text" data-validation="number" data-validation-allowing="range[1;100]">
+  </p>
+       <p>
+    12th :
+   <input type="text" data-validation="number" data-validation-allowing="range[1;100]">
+  </p>
+  <p>
+    <input type="submit" />
+  </p>
+</form>
+    
+    <script>
+    $.validate({
+        modules : 'date, security'
+    });
+</script> 
+    </body>
+</html>
